@@ -1,8 +1,12 @@
 machine:
   ruby:
-    version: 4.4.0
+    version: 2.4.0
 deployment:
   production:
     branch: development
     commands:
       - bundle exec middleman s3_sync
+
+test:
+  override:
+    - "true"
