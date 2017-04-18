@@ -53,7 +53,7 @@ end
 configure :build do
   activate :external_pipeline,
     name: :gulp,
-    command: "npm run production",
+    command: "npm run staging",
     source: ".tmp",
     latency: 1
 end
