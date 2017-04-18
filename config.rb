@@ -49,6 +49,14 @@ configure :development do
  activate :livereload
 end
 
+#External Pipeline
+configure :build do
+  activate :external_pipeline,
+    name: :gulp,
+    command: "npm run production",
+    source: ".tmp",
+    latency: 1
+
 configure :build do
   activate :minify_css
   activate :minify_javascript
@@ -56,9 +64,3 @@ end
 
 # Portfolio
 page "portfolio/*", :layout => "portfolio"
-
-#CircleCI Staging
-activate :s3_sync do |s3_sync|
-  s3_sync.bucket                = 'staging.enemcreative.com'
-  s3_sync.region                = 'us-east-1'
-end
