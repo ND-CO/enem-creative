@@ -1,0 +1,24 @@
+<% wrap_layout :default do %>
+<div class="wrap container-fluid">
+	<div class="project-hero">
+		<div class="content">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 border-overflow padfixleft">
+					<div class="borderFour"></div>
+					<h1 class="header-fade project-title">
+						<%= current_page.data.title %> 
+					</h1>
+					<p class="proj-desc-fade"><%= current_page.data.description %> </p>
+				</div>
+				<div class="col-sm-6">
+					<div class="perc-main image-overflow">
+						<img src="<%= current_page.data.img %>" class="perc-hero">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<%= yield %>
+
+<% end %>
