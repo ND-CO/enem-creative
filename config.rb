@@ -49,15 +49,6 @@ configure :development do
  activate :livereload
 end
 
-#External Pipeline
-configure :build do
-  activate :external_pipeline,
-    name: :gulp,
-    command: "npm run staging",
-    source: ".tmp",
-    latency: 1
-end
-
 configure :build do
   activate :minify_css
   activate :minify_javascript
