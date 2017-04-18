@@ -43,14 +43,6 @@ page '/*.txt', layout: false
 #Directory Index
 activate :directory_indexes
 
-# Production Run on Build
-configure :build do
-  activate :external_pipeline,
-    name: :gulp,
-    command: "npm run production",
-    source: ".tmp",
-    latency: 1
-end
 
 #CircleCI Staging
 activate :s3_sync do |s3_sync|
