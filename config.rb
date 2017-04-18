@@ -43,10 +43,13 @@ page '/*.txt', layout: false
 #Directory Index
 activate :directory_indexes
 
-
-# Live Reload
-configure :development do
- activate :livereload
+# Production Run on Build
+configure :build do
+  activate :external_pipeline,
+    name: :gulp,
+    command: "npm run production",
+    source: ".tmp",
+    latency: 1
 end
 
 #CircleCI Staging
@@ -55,9 +58,22 @@ activate :s3_sync do |s3_sync|
   s3_sync.region                = 'us-east-1'
 end
 
+
+# Live Reload
+configure :development do
+ activate :livereload
+end
+
+  activate :minify_html do |html|
+    html.remove_quotes = false
+    html.remove_intertag_spaces = true
+  end
+
 configure :build do
-  activate :minify_css
+  # activate :minify_css
   activate :minify_javascript
+  activate :gzip
+  
 end
 
 # Portfolio
