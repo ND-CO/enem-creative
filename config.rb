@@ -56,6 +56,7 @@ configure :build do
     command: "npm run production",
     source: ".tmp",
     latency: 1
+end
 
 configure :build do
   activate :minify_css
