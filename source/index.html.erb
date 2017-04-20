@@ -3,6 +3,7 @@ layout: "default"
 ---
 <!-- Hero -->
 <div class="wrap container-fluid">
+<div class="container">
   <div class="hero">
       <div class="row content-hero">
         <div class="col-md-6 col-sm-6 padfixleft border-overflow">
@@ -17,6 +18,7 @@ layout: "default"
       </div>
     </div>
   </div>
+</div>
 </div>
 
 <!-- Hero Break -->
@@ -36,7 +38,7 @@ layout: "default"
     <div class="row thumb-hover">
       <div class="col-sm-6 thumb">
         <h5 class="viewleft thumb-hover">
-          <div class="top-border"></div><a href="{% post_url 2015-05-26-marchetti-beauty %}">VIEW</a></h5>
+          <div class="top-border"></div><%= link_to 'VIEW', '/portfolio/marchetti-beauty' %></h5>
       </div>
       <div class="col-sm-6 thumb">
         <div class="project-active">
@@ -66,8 +68,7 @@ layout: "default"
       </div>
       <div class="col-sm-6 thumb">
         <h5 class="viewright thumb-hover">
-          <a href="{% post_url 2015-05-24-billy-pacholski %}">
-            <div class="top-border"></div>VIEW</div>
+            <div class="top-border"></div><%= link_to 'VIEW', '/portfolio/william-pacholski' %></div>
       </a>
       </h5>
     </div>
@@ -78,7 +79,9 @@ layout: "default"
     <div class="row thumb-hover">
       <div class="col-sm-6 thumb">
         <h5 class="viewleft thumb-hover">
-          <div class="top-border"></div><a href="{% post_url 2015-05-25-bod-creative %}">VIEW</a></h5>
+          <div class="top-border"></div>
+          <%= link_to 'VIEW', '/portfolio/bod-creative' %>
+          </h5>
       </div>
       <div class="col-sm-6 thumb">
         <div class="project-active">
@@ -113,8 +116,7 @@ layout: "default"
       <div class="col-sm-6 thumb">
         <h5 class="viewright">
           <a href="{% post_url 2015-05-28-samsung-cspire %}">
-            <div class="top-border"></div>VIEW</div>
-      </a>
+            <%= link_to 'VIEW', '/portfolio/samsung-cspire' %>
       </h5>
     </div>
 
@@ -124,7 +126,9 @@ layout: "default"
     <div class="row thumb-hover">
       <div class="col-sm-6 thumb">
         <h5 class="viewleft">
-          <div class="top-border"></div><a href="{% post_url 2015-05-29-fedex-annual-report %}">VIEW</a></h5>
+          <div class="top-border"></div>
+            <%= link_to 'VIEW', '/portfolio/fedex-annual-report' %>
+          </h5>
       </div>
       <div class="col-sm-6 thumb">
 
@@ -162,7 +166,9 @@ layout: "default"
       <div class="col-sm-6 thumb">
 
         <h5 class="viewright">
-          <div class="top-border"></div><a href="{% post_url 2015-05-26-milk-stout %}">VIEW</a></h5>
+          <div class="top-border"></div>
+          <%= link_to 'VIEW', '/portfolio/milk-stout' %>
+          </h5>
       </div>
     </div>
 
@@ -174,7 +180,9 @@ layout: "default"
       <div class="col-sm-6 thumb">
 
         <h5 class="viewleft">
-          <div class="top-border"></div><a href="{% post_url 2015-05-27-saor-perfume %}">VIEW</a></h5>
+          <div class="top-border"></div>
+            <%= link_to 'VIEW', '/portfolio/saor-perfume' %>
+          </h5>
       </div>
       <div class="col-sm-6 thumb">
 
@@ -201,6 +209,8 @@ layout: "default"
       </div>
       <div class="col-sm-6 thumb">
         <h5 class="viewright">
-          <div class="top-border"></div><a href="#">VIEW</a></h5>
+          <div class="top-border"></div>
+          <%= link_to 'VIEW', '/portfolio/vellabox' %>
+          </h5>
       </div>
     </div>

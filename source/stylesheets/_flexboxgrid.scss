@@ -1,19 +1,19 @@
-.container-fluid,
 .container {
-  margin-right: auto;
-  margin-left: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-right: 10%;
+  padding-left: 10%;
 }
 
 .wrap {
     box-sizing: border-box;
-    max-width: 1000px;
     margin: 0 auto;
 }
 
 
 .container-fluid {
-  padding-right: 5rem;
-  padding-left: 5rem;
+margin-right:auto;
+margin-left:auto
 }
 
 .row {
