@@ -45,8 +45,6 @@ nav {
 }
 
 .header-wrap {
-	margin-left:-5em;
-	margin-right:-5em;
 	position:relative;
 }
 
@@ -70,11 +68,15 @@ header {
 .sticky {
 	z-index:100000;
 	width:100%;
-	max-width:1000px;
 	padding-top:12px;
 	position:fixed;
 	background-color:#FFF;
 	height:40px;
+
+	.sticky-border {
+		border-bottom:1px solid $enem-beige;
+		padding-top:8px;
+	}
 
 	nav {
  	     margin-top: -6px;

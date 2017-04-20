@@ -38,7 +38,9 @@ var header = $(".header");
 
 
 var headerAnim = new TimelineMax({paused:true});
-headerAnim.to(".shrink", .5, {css:{height:"42", rotation:-90,}, ease:Power1.ease},0);
+headerAnim.to(".shrink", .5, {css:{height:"42", rotation:-90,}, ease:Power1.ease},0)
+          .from(".sticky-border", 1.5, {xPercent:-100, ease:Power4.easeInOut}, .5);
+;
 
 
 
