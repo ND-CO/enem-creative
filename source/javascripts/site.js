@@ -47,6 +47,14 @@ headerAnim.to(".shrink", .5, {css:{height:"42", rotation:-90,}, ease:Power1.ease
 
 //PORTFOLIO HOVER V1
 
+// $(function(){
+//     $('.portfolio-row').css({'height':($(document).height())+'px'});
+//     $(window).resize(function(){
+//         $('.portfolio-row').css({'height':($(document).height())+'px'});
+//     });
+// });
+
+
 $(".thumb-hover").hover(function(){
     var active = $(this).find(".project-active");
     var bgScale = $(this).find(".background-grow");

@@ -38,18 +38,22 @@ body {
 
 }
 
-.portfolio {
+.portfolio-list {
 	margin-left:-80px;
 	margin-right:-80px;
 
-		.row {
-		padding:0px;
+		.portfolio-row {
+			height:100%;
 		}
 
 		.thumb {
 			overflow:hidden;
 			padding:0;
 			position:relative;
+		}
+
+		img {
+			height:100%
 		}
 
 		.top-border {
