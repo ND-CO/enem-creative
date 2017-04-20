@@ -147,6 +147,18 @@ new ScrollMagic.Scene({
 .addTo(ctrl);
 
 
+///// PORTFOLIO DEATAILS STAGGER
+
+var projectdetails = new TimelineMax();
+    projectdetails.staggerFrom(".project-detail", 1, {yPercent:100, opacity:0, ease:Power1.easeOut}, .2);
+
+new ScrollMagic.Scene({
+    offset:-50,
+    triggerHook:0,
+    triggerElement:'.project-details-list',
+})
+.setTween(projectdetails)
+.addTo(ctrl);
 
 
 });
