@@ -38,13 +38,8 @@ body {
 
 }
 
-.portfolio-list {
-	margin-left:-80px;
-	margin-right:-80px;
-
-		.portfolio-row {
-			height:100%;
-		}
+.portfolio-row {
+	max-height:550px;
 
 		.thumb {
 			overflow:hidden;
@@ -52,21 +47,53 @@ body {
 			position:relative;
 		}
 
-		img {
-			height:100%
-		}
+			img {
+				width:100%;
+				height:100%;
+				object-fit:cover;
+}
 
-		.top-border {
-			margin-left:-1px;
-			width:42px;
-			padding-bottom:10px;
-			border-top:2px solid $enem-beige;
-		}
+.top-border {
+	margin-left:-1px;
+	width:42px;
+	padding-bottom:10px;
+	border-top:2px solid $enem-beige;
+}
+
+// Project Hover
+
+.project-active {
+	height:100%;
+	width:100%;
+	z-index:1000;
+	position:absolute;
+	background-color:$enem-black;
+	opacity:0;
+}
+
+.proj-active-container {
+	margin-top:80px;
+	overflow:hidden;
+	margin-left:2em;
+	margin-right:2em;
+	position:relative;
+}
+
+.hover {
+	height:100%;
+	width:100%;
+}
+		
 	
 
+.viewright a, .viewleft a {
+		font-family: $secondary-font;
+		text-decoration:none;
+		color:$enem-black;
+}
 	.viewright {
-		margin-left:75%;
-		margin-top:48%;
+		margin-left:65%;
+		margin-top:34%;
 	}
 
 	.borderOne {
@@ -76,8 +103,8 @@ body {
 	}
 
 	.viewleft {
-		margin-left:15%;
-		margin-top:48%;
+		margin-left:25%;
+		margin-top:34%;
 	}
 
 }

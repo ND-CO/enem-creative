@@ -64,27 +64,3 @@ margin-right:0;
 .bod-background {
 	background-color: #25272B;
 }
-
-
-// Project Hover
-
-.project-active {
-	height:100%;
-	width:100%;
-	z-index:1000;
-	position:absolute;
-	background-color:$enem-black;
-	opacity:0;
-}
-
-.proj-active-container {
-	margin-top:80px;
-	overflow:hidden;
-	width:100%;
-	position:relative;
-}
-
-.hover {
-	height:100%;
-	width:100%;
-}
