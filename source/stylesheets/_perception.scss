@@ -29,6 +29,8 @@
 		  -moz-background-size: cover;
 		  -o-background-size: cover;
 		  background-size: cover;
+		  min-width: 200%;
+          margin-left: -250px;
 }
 
 /* Fistbump Image */
@@ -103,8 +105,17 @@
 }
 
 .lets-work {
-	background-color:#9B9B9B;
+	background-color:$enem-beige;
 	height:300px;
 	padding-top:130px;
+
+	.border-black {
+		border-color:$enem-black;
+	}
+	
+	a {
+		text-decoration:none;
+		color:$enem-black;
+	}
 }
 

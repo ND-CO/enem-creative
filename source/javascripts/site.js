@@ -24,7 +24,7 @@ var header = $(".header");
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
 
-        if (scroll >= 50) {
+        if (scroll >= 5) {
             header.removeClass('not-sticky').addClass("sticky");
             console.log("sticky")
             headerAnim.play()
@@ -135,8 +135,6 @@ new ScrollMagic.Scene({
 
 
 ///// GUIDING PRINCIPLES
-
-
 var gp = new TimelineMax();
 
 gp.from(".gp-one-bd", 1, {xPercent:-100, ease:Power3.easeOut}, .2)
@@ -155,6 +153,39 @@ new ScrollMagic.Scene({
 .addTo(ctrl);
 
 
+///// CAPABILITIES
+var cp = new TimelineMax();
+
+cp.from(".cp-one-bd", 1, {xPercent:-100, ease:Power3.easeOut}, .2)
+        .from(".cp-two-bd", 1, {xPercent:-100, ease:Power3.easeOut}, .2)
+        .from(".cp-three-bd", 1, {xPercent:100, ease:Power3.easeOut}, .4)
+        .from(".cp-title-one", 1, {yPercent:100, opacity:0, ease:Power1.easeOut}, .3)
+        .from(".cp-title-two", 1, {yPercent:100, opacity:0, ease:Power1.easeOut}, .4)
+        .from(".cp-title-three", 1, {yPercent:100, opacity:0, ease:Power1.easeOut}, .4)
+        .staggerFrom(".service-list li", 1, {yPercent:20, opacity:0, ease:Power1.easeOut}, .10)
+        .staggerFrom(".core li", 1, {yPercent:20, opacity:0, ease:Power1.easeOut}, .10);
+
+new ScrollMagic.Scene({
+    offset:-50,
+    triggerHook:0,
+    triggerElement:'.cp-trigger',
+})
+.setTween(cp)
+.addTo(ctrl);
+
+
+// Perception On Hover 
+
+var worklink = new TimelineMax({paused:true});
+worklink.to('.lets-work', .2, { backgroundColor:"#4A4A4A" }, 0);
+worklink.to('.border-black', .2, { borderColor:"#DBD9D6" }, 0 );
+worklink.to('.work-link a', .2, { color:"#FFFFFF" }, 0 );
+
+$(".work-link").on("mouseenter", function() {     
+  worklink.play();
+}).on("mouseleave", function() {
+  worklink.reverse();
+});
 ///// PORTFOLIO DEATAILS STAGGER
 
 var projectdetails = new TimelineMax();
