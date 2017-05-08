@@ -53,6 +53,16 @@ margin-right:0;
  }
 
 
+.logos {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  	.logo-align {
+		 justify-content: center;
+		 padding: 200px 0px;
+	  }
+}
+
 
 // Project Background Colors
 
