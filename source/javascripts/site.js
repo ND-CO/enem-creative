@@ -43,6 +43,17 @@ headerAnim.to(".shrink", .5, {css:{height:"42", rotation:-90,}, ease:Power1.ease
 ;
 
 
+// Mobile Menu
+
+var menu = new TimelineMax({paused:true, reversed:true});
+menu.from(".mobile-menu-panel", .5, {yPercent:-100, ease:Power2.easeOut}, .10);
+menu.to(".menu-active", .5, {css:{marginTop:"-25px"}, ease:Power2.easeOut}, .10);
+
+ var $menu = $(".mobile-menu");
+  $menu.on('click', function(event) {
+  menu.reversed() ? menu.play() : menu.reverse();	
+});
+
 
 
 //PORTFOLIO HOVER V1

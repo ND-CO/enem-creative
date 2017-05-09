@@ -51,6 +51,7 @@ nav {
 
 
 header {
+	background-color:$enem-white;
 	height:100px;
 	position:relative;
 
@@ -83,3 +84,55 @@ header {
 	}
 }
 
+// Mobile
+
+.mobile-menu {
+	z-index:20;
+	position:relative;
+	ul {
+		height:12px;
+		overflow:hidden;
+	}
+		li {
+		padding-bottom:10px;
+		display:block;
+		list-style-type: none;
+	}
+}
+
+@media (min-width: 800px) { 
+		.mobile-menu {
+			display:none;
+		}
+
+ }
+
+ @media (max-width: 800px) { 
+	 
+		.mobile-menu-panel {
+			z-index:10;
+			position:fixed;
+			margin-top:0px;
+			margin-bottom:0px;
+			left:0;
+			top:0;
+			height:100%;
+			width:100%;
+			background-color:$enem-beige;
+			display:flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content:center;
+			padding-left:0px;
+				ul {
+				}
+
+				li {
+					font-size:1em;
+					 padding-top:25px;
+					 padding-left:0px;
+					 position:relative;
+				}
+		}
+
+ }
