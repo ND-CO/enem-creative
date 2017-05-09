@@ -5,8 +5,6 @@
 }
 
 .project-desc {
-	margin-left:72px;
-	margin-right:72px;
 	padding: 100px 0px;
 }
 
@@ -78,4 +76,20 @@ margin-right:0;
 
 .bod-background {
 	background-color: #25272B;
+}
+
+// Video Full Width
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
