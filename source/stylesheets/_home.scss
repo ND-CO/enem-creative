@@ -37,14 +37,12 @@ body {
 }
 
 .portfolio-row {
-	max-height:550px;
-	min-height:550px;
-
+	height:550px;
 		.thumb {
 			overflow:hidden;
 			padding:0;
 			position:relative;
-			height:auto;
+			height:100%;
 		}
 
 			img {
@@ -102,17 +100,18 @@ body {
 		color:$enem-black;
 }
 	.viewright {
+		align-self:center;
 		margin-right:50px;
+	}
+	.viewleft {
+		align-self:center;
+		margin-left:50px;
 	}
 
 	.borderOne {
 		padding-bottom:5px;
 		overflow:hidden;
 		margin-left:2px;
-	}
-
-	.viewleft {
-		margin-left:50px;
 	}
 
 
