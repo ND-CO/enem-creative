@@ -40,11 +40,13 @@ body {
 
 .portfolio-row {
 	max-height:550px;
+	min-height:550px;
 
 		.thumb {
 			overflow:hidden;
 			padding:0;
 			position:relative;
+			height:auto;
 		}
 
 			img {
@@ -58,6 +60,7 @@ body {
 	width:42px;
 	padding-bottom:10px;
 	border-top:2px solid $enem-beige;
+	}
 }
 
 // Project Hover
@@ -84,7 +87,16 @@ body {
 	width:100%;
 }
 		
-	
+.view {
+	display:flex;
+	align-self: center;
+}
+.view-reverse {
+	display:flex;
+	align-self: center;
+	flex-direction: row-reverse
+}
+
 
 .viewright a, .viewleft a {
 		font-family: $secondary-font;
@@ -92,8 +104,7 @@ body {
 		color:$enem-black;
 }
 	.viewright {
-		margin-left:65%;
-		margin-top:34%;
+		margin-right:50px;
 	}
 
 	.borderOne {
@@ -103,9 +114,33 @@ body {
 	}
 
 	.viewleft {
-		margin-left:25%;
-		margin-top:34%;
+		margin-left:50px;
 	}
 
+
+// MOBILE
+
+
+// iPhone 6 //
+@media only screen and (min-device-width: 320px) and (orientation : portrait) { 
+
+.viewleft {
+	margin-left:6px;
+	-moz-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    -o-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+	}
+.viewright {
+	margin-right:6px;
+	-moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    -o-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
 }
 
+.enemlogo {
+	margin-left:-60px;
+}
+
+}
