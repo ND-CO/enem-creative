@@ -27,10 +27,8 @@ body {
 .beige {
 	height:350px;
 	background-color: $enem-beige;
-	
-	.intro {
-		margin-top:100px;
-	}
+	display:flex;
+	align-items:center;
 	h3 {
 		line-height:2em;
 	}
@@ -143,4 +141,9 @@ body {
 	margin-left:-60px;
 }
 
+.hero	{ 
+	.content-hero {
+	padding-top:100px;
+	}
+}
 }
