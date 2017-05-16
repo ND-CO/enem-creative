@@ -29,6 +29,10 @@ margin-left:0;
 margin-right:0;
 }
 
+.portfolio {
+	width:100%;
+}
+
 .portfolio .row {
 	border-bottom:1px solid #FFFFFF;
 }
@@ -57,12 +61,17 @@ margin-right:0;
 
 
 .logos {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+		img {
+			height:60%;
+			width:auto;
+		}
   	.logo-align {
 		 justify-content: center;
 		 padding: 200px 0px;
+		 border-bottom:1px solid $enem-beige;
 	  }
 }
 
