@@ -59,14 +59,14 @@ margin-right:0;
   	}
  }
 
+ // Logo Page
 
 .logos {
 	display:flex;
 	justify-content: center;
 	align-items:center;
 		img {
-			height:60%;
-			width:auto;
+			max-width:240px;
 		}
   	.logo-align {
 		 justify-content: center;
