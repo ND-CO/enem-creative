@@ -137,7 +137,7 @@ mission.from(".mission-one-bd", 1, {xPercent:-100, ease:Power3.easeOut}, .2)
        .from(".text-fade", 1, {yPercent:5, opacity:0, ease:Power1.easeOut}, .5);
 
 new ScrollMagic.Scene({
-    offset:-50,
+    offset:-200,
     triggerHook:0,
     triggerElement:'.mission-trigger',
 })
