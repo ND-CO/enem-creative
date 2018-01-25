@@ -55,6 +55,20 @@ menu.to(".menu-active", .5, {css:{marginTop:"-25px"}, ease:Power2.easeOut}, .10)
 });
 
 
+// Scroll2ID
+
+var $window = $(window);
+$(".viewprojects").click(function(e) {
+ TweenMax.to($window, 1, {
+        scrollTo:{
+            y: ".work",
+            offsetY:70,
+            autoKill: true
+        }, 
+        ease:Power2.easeInOut 
+     });
+});
+
 
 //PORTFOLIO HOVER V1
 
@@ -65,6 +79,7 @@ menu.to(".menu-active", .5, {css:{marginTop:"-25px"}, ease:Power2.easeOut}, .10)
 //     });
 // });
 
+// PORFOLIO HOMEPAGE HOVERS
 
 $(".thumb-hover").hover(function(){
     var active = $(this).find(".project-active");
@@ -90,6 +105,13 @@ var projectHover = new TimelineMax();
    	  .to(bgScale, .50, {scale:1}, .2)
   	  .to(border, .1, {xPercent:0, ease:Power4.easeInOut}, .1);
     })
+
+
+
+    // Work Call To Action
+
+
+
 // Perception Timeline
 
 // init controller
@@ -185,7 +207,7 @@ new ScrollMagic.Scene({
 .addTo(ctrl);
 
 
-// Perception On Hover 
+// Work Call To Action
 
 var worklink = new TimelineMax({paused:true});
 worklink.to('.lets-work', .2, { backgroundColor:"#4A4A4A" }, 0);
@@ -197,6 +219,9 @@ $(".work-link").on("mouseenter", function() {
 }).on("mouseleave", function() {
   worklink.reverse();
 });
+
+
+
 ///// PORTFOLIO DEATAILS STAGGER
 
 var projectdetails = new TimelineMax();
