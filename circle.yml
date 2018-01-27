@@ -6,6 +6,12 @@ deployment:
     branch: development
     commands:
       - bundle exec middleman s3_sync
+      
+  production:
+    branch: master
+    commands:
+      - bundle exec middleman s3_sync --environment=production
+
 
 test:
   override:
