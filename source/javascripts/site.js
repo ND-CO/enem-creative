@@ -24,7 +24,7 @@ var header = $(".header");
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
 
-        if (scroll >= 50) {
+        if (scroll >= 5) {
             header.removeClass('not-sticky').addClass("sticky");
             console.log("sticky")
             headerAnim.play()
@@ -38,12 +38,48 @@ var header = $(".header");
 
 
 var headerAnim = new TimelineMax({paused:true});
-headerAnim.to(".shrink", .5, {css:{height:"42", rotation:-90,}, ease:Power1.ease},0);
+headerAnim.to(".shrink", .5, {css:{height:"42", rotation:-90,}, ease:Power1.ease},0)
+          .from(".sticky-border", 1.5, {xPercent:-100, ease:Power4.easeInOut}, .5);
+;
 
 
+// Mobile Menu
+
+var menu = new TimelineMax({paused:true, reversed:true});
+menu.from(".mobile-menu-panel", .5, {yPercent:-100, ease:Power2.easeOut}, .10);
+menu.to(".menu-active", .5, {css:{marginTop:"-25px"}, ease:Power2.easeOut}, .10);
+
+ var $menu = $(".mobile-menu");
+  $menu.on('click', function(event) {
+  menu.reversed() ? menu.play() : menu.reverse();	
+});
+
+
+// Scroll2ID
+
+var $window = $(window);
+$(".viewprojects").click(function(e) {
+ TweenMax.to($window, 1, {
+        scrollTo:{
+            y: ".work",
+            offsetY:70,
+            autoKill: true
+        }, 
+        ease:Power2.easeInOut 
+     });
+});
 
 
 //PORTFOLIO HOVER V1
+
+// $(function(){
+//     $('.portfolio-row').css({'height':($(document).height())+'px'});
+//     $(window).resize(function(){
+//         $('.portfolio-row').css({'height':($(document).height())+'px'});
+//     });
+// });
+
+// PORFOLIO HOMEPAGE HOVERS
 
 $(".thumb-hover").hover(function(){
     var active = $(this).find(".project-active");
@@ -69,6 +105,13 @@ var projectHover = new TimelineMax();
    	  .to(bgScale, .50, {scale:1}, .2)
   	  .to(border, .1, {xPercent:0, ease:Power4.easeInOut}, .1);
     })
+
+
+
+    // Work Call To Action
+
+
+
 // Perception Timeline
 
 // init controller
@@ -94,7 +137,7 @@ mission.from(".mission-one-bd", 1, {xPercent:-100, ease:Power3.easeOut}, .2)
        .from(".text-fade", 1, {yPercent:5, opacity:0, ease:Power1.easeOut}, .5);
 
 new ScrollMagic.Scene({
-    offset:-50,
+    offset:-200,
     triggerHook:0,
     triggerElement:'.mission-trigger',
 })
@@ -125,8 +168,6 @@ new ScrollMagic.Scene({
 
 
 ///// GUIDING PRINCIPLES
-
-
 var gp = new TimelineMax();
 
 gp.from(".gp-one-bd", 1, {xPercent:-100, ease:Power3.easeOut}, .2)
@@ -145,6 +186,54 @@ new ScrollMagic.Scene({
 .addTo(ctrl);
 
 
+///// CAPABILITIES
+var cp = new TimelineMax();
+
+cp.from(".cp-one-bd", 1, {xPercent:-100, ease:Power3.easeOut}, .2)
+        .from(".cp-two-bd", 1, {xPercent:-100, ease:Power3.easeOut}, .2)
+        .from(".cp-three-bd", 1, {xPercent:100, ease:Power3.easeOut}, .4)
+        .from(".cp-title-one", 1, {yPercent:100, opacity:0, ease:Power1.easeOut}, .3)
+        .from(".cp-title-two", 1, {yPercent:100, opacity:0, ease:Power1.easeOut}, .4)
+        .from(".cp-title-three", 1, {yPercent:100, opacity:0, ease:Power1.easeOut}, .4)
+        .staggerFrom(".service-list li", 1, {yPercent:20, opacity:0, ease:Power1.easeOut}, .10)
+        .staggerFrom(".core li", 1, {yPercent:20, opacity:0, ease:Power1.easeOut}, .10);
+
+new ScrollMagic.Scene({
+    offset:-50,
+    triggerHook:0,
+    triggerElement:'.cp-trigger',
+})
+.setTween(cp)
+.addTo(ctrl);
+
+
+// Work Call To Action
+
+var worklink = new TimelineMax({paused:true});
+worklink.to('.lets-work', .2, { backgroundColor:"#4A4A4A" }, 0);
+worklink.to('.border-black', .2, { borderColor:"#DBD9D6" }, 0 );
+worklink.to('.work-link a', .2, { color:"#FFFFFF" }, 0 );
+
+$(".work-link").on("mouseenter", function() {     
+  worklink.play();
+}).on("mouseleave", function() {
+  worklink.reverse();
+});
+
+
+
+///// PORTFOLIO DEATAILS STAGGER
+
+var projectdetails = new TimelineMax();
+    projectdetails.staggerFrom(".project-detail", 1, {yPercent:100, opacity:0, ease:Power1.easeOut}, .2);
+
+new ScrollMagic.Scene({
+    offset:-50,
+    triggerHook:0,
+    triggerElement:'.project-details-list',
+})
+.setTween(projectdetails)
+.addTo(ctrl);
 
 
 });

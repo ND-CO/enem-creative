@@ -1,0 +1,104 @@
+// Projects
+
+.project-hero {
+	padding-top:200px;
+}
+
+.project-desc {
+	padding: 100px 0px;
+}
+
+.proj-desc-fade {
+	margin-top:0;
+	padding-top:0;
+}
+
+.project-title {
+	margin-bottom:10px;
+}
+
+.project-details-list {
+	padding-top:75px;
+	padding-bottom:50px;
+}
+
+.full-image {
+padding:0;
+margin-top:-4px;
+margin-left:0;
+margin-right:0;
+}
+
+.portfolio {
+	width:100%;
+}
+
+.portfolio .row {
+	border-bottom:1px solid #FFFFFF;
+}
+
+.portfolio img {
+	height:100%;
+	width:100%;
+}
+
+.image-push {
+	margin-top:100px;
+}
+
+// Alignment of Non Full Width
+
+.two-up {
+	border-right:1px solid #FFFFFF;
+}
+
+@media only screen and (max-width: 736px) { 
+ 	.two-up {
+  		border-right:0px;
+  		border-bottom:1px solid #FFFFFF;
+  	}
+ }
+
+ // Logo Page
+
+.logos {
+	display:flex;
+	justify-content: center;
+	align-items:center;
+		img {
+			max-width:240px;
+		}
+  	.logo-align {
+		 justify-content: center;
+		 padding: 200px 0px;
+		 border-bottom:1px solid $enem-beige;
+	  }
+}
+
+
+// Project Background Colors
+
+
+.background {
+	width:100%;
+}
+
+.bod-background {
+	background-color: #25272B;
+}
+
+// Video Full Width
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

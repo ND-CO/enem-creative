@@ -1,0 +1,168 @@
+/* Main Hero Image */
+.perc-main {
+	position:relative;
+	margin-left:150px;
+	margin-right:-80px;
+	margin-top:-150px;
+	overflow:hidden;
+}
+
+.perc-hero {
+		  width:100%;
+		  background: no-repeat center center fixed;	
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+}
+
+.mission-row {
+	margin-top:350px;
+}
+
+/* Team Photo */
+
+.partners {
+		  height:700px;
+		  background: url('../images/partners.jpg') no-repeat center center fixed;	
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+}
+
+/* Fistbump Image */
+
+.fistbump{
+	position:relative;
+	margin-left:-80px;
+	margin-right:-80px;
+	margin-top:-100px;
+
+}
+
+.fistbump-hero {
+		  width:100%;
+		  background: no-repeat center center fixed;	
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+}
+
+/* Bottom Borders for Headlines */
+
+.bottom-border{
+	padding-bottom:5px;
+}
+
+
+.mission {
+	width:85px;
+}
+
+.ideology {
+	width:105px;
+}
+
+.guiding-principles {
+	width:225px;
+}
+
+.capabilities {
+	width:135px;
+}
+
+.core {
+	padding:0;
+	margin-top:0px;
+
+	img {
+		margin-bottom:-8px;
+		margin-top:15px;
+		width:25px;
+		height:25px;
+	}
+
+	li {
+		letter-spacing:.3em;
+		font-family: $secondary-font, Helvetica;
+		list-style-type:none;
+		line-height:2em;
+	}
+}
+
+.service-list {
+
+	li {
+		font-family: $primary-font, serif;
+		text-align:right;
+		list-style-type:none;
+		line-height:1.8em;
+	}
+}
+
+.lets-work {
+	background-color:$enem-beige;
+	height:300px;
+	padding-top:130px;
+	border-bottom:1px solid $enem-black;
+
+	.border-black {
+		border-color:$enem-black;
+	}
+	
+	a {
+		text-decoration:none;
+		color:$enem-black;
+	}
+}
+
+// iPhone 6 //
+@media only screen and (min-device-width: 320px) and (orientation : portrait) { 
+
+	.mobile-pad {
+		height:50px;
+	}
+	
+	.perc-main {
+		margin-top:50px;
+		margin-right:-40px;
+		width:80%;
+	}
+
+	.mission-row {
+		margin-top:80px;
+	}
+
+	.fistbump {
+		padding:80px 0px;
+	}
+
+	.service-list {
+		padding-left:0px;
+			li {
+			text-align:left;
+			}
+			.service-dash {
+				display:none;
+			}
+	}
+
+}
+
+// iPhone 7+
+
+@media only screen and (min-device-width: 414px) and (orientation : portrait) { 
+
+	.perc-main {
+		margin-top:50px;
+		margin-right:-40px;
+		width:80%;
+	}
+
+	.mission-row {
+		margin-top:120px;
+	}
+
+}

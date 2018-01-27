@@ -5,26 +5,60 @@
 		<div class="header-wrap">
 			<div class="header middle">
 				<div class="row navigation-padding">
-					<div class="col-md-6 col-sm-6">
+					<div class="col-md-6 col-xs-6">
 						<div class="box">
 							<div class="enemlogo nav-load">
+							<a href="/index.html">	
 								<img class="shrink" src="/images/enem.svg">
+							</a>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6 col-sm-6">
+					<div class="col-md-6 col-xs-6">
 						<nav>
-							<ul>
+							<div class="mobile-menu">
+								<ul class="menu-transition">
+									<div class="menu-active">
+										<li>MENU</li>
+										<li>CLOSE</li>
+									</div>
+								</ul>
+							</div>
+							<div class="desktop-nav">
 								<li class="element nav-load">
-									<li><%= link_to 'Home', '/index.html' %></li>
-									<li><%= link_to 'Perception', '/perception.html' %></li>
-									<li><%= link_to 'Contact', '/contact.html' %></li>
+										
+										<li class="menu-link">
+											<%= link_to 'Contact', '/contact.html' %>
+										</li>
+										<li class="menu-link">
+											<%= link_to 'Perception', '/perception.html' %>
+										</li>
+										<li class="menu-link">
+											<%= link_to 'Home', '/index.html' %>
+										</li>
+									</li>
+							</div>
+
+								<!-- Mobile Panel -->
+							<ul class="mobile-menu-panel">
+								<li class="element nav-load">
+									<li class="menu-link">
+										<%= link_to 'Home', '/index.html' %>
+									</li>
+									<li class="menu-link">
+										<%= link_to 'Perception', '/perception.html' %>
+									</li>
+									<li class="menu-link">
+										<%= link_to 'Contact', '/contact.html' %>
+									</li>
 								</li>
 							</ul>
+							<!-- Mobile Panel End -->
 						</nav>
 					</div>
 				</div>
-			</div>
+				<div class="sticky-border">
+				</div>
 	</header>
 	</div>
-</div>
+	</div>

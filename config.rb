@@ -44,14 +44,37 @@ page '/*.txt', layout: false
 activate :directory_indexes
 
 
+#CircleCI Staging
+configure :staging do
+activate :s3_sync do |s3_sync|
+  s3_sync.bucket                = 'staging.enemcreative.com'
+  s3_sync.region                = 'us-east-1'
+  end
+end
+
+
+configure :production do
+    activate :s3_sync do |s3_sync|
+      s3_sync.bucket                = 'enemcreative.com'
+      s3_sync.region                = 'us-east-1'
+      default_caching_policy max_age: (60 * 60 * 24 * 365)
+      caching_policy 'text/html', public: true, max_age: 0, must_revalidate: true
+   end
+end
+
+
 # Live Reload
 configure :development do
  activate :livereload
 end
 
+  activate :minify_html do |html|
+    html.remove_quotes = false
+    html.remove_intertag_spaces = true
+  end
+
 configure :build do
-  activate :minify_css
-  activate :minify_javascript
+  activate :gzip
 end
 
 # Portfolio
