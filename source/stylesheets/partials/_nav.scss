@@ -105,9 +105,13 @@ header {
 		}
 
  }
+@media (max-width: 800px) { 
+ 	nav {
+			padding-top:0px;
+		}
+}
 
-
-@media (min-width: 800px) { 
+@media (min-width: 800px) {
 		.mobile-menu {
 			display:none;
 		}
