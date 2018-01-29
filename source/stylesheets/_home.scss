@@ -55,7 +55,14 @@ body {
 			margin-left:-1px;
 			width:42px;
 			padding-bottom:10px;
-			border-top:2px solid $enem-beige;
+			border-top:2px solid $enem-beige 
+		}
+
+			.bottom-border {
+				margin-left:-1px;
+				width:0px;
+				margin-top:10px;
+				border-top:2px solid $enem-beige;
 		}
 	}
 

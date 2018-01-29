@@ -20,13 +20,24 @@ hero.from(loading, 1.5, {css:{height:"100%"}, ease:Power3.easeInOut}, 0)
 
 // View Call To Action
     var view = new TimelineMax({paused:true});
-view.to('.view-work', .85, {css:{width: "40px"}, ease:Power4.easeInOut}, 0)
+view.to('.view-work', .85, {css:{width: "40px"}, ease:Power4.easeInOut}, 0);
 
 $(".view").on("mouseenter", function() {     
   view.play();
 }).on("mouseleave", function() {
   view.reverse();
 });
+
+// Portfolio View Hover
+var viewproject = new TimelineMax({paused:true});
+viewproject.to('.bottom-border', .5, {css:{width: "42px"}, ease:Power4.easeInOut}, 0);
+
+$(".project-view").on("mouseenter", function() {     
+  viewproject.play();
+}).on("mouseleave", function() {
+  viewproject.reverse();
+});
+
 
 
 // Menu
