@@ -18,6 +18,17 @@ hero.from(loading, 1.5, {css:{height:"100%"}, ease:Power3.easeInOut}, 0)
     .from(".perc-hero", 1.5, { yPercent:-100, ease:Power3.easeInOut}, .8)
     .from(".proj-desc-fade", 2, {css:{marginTop: "20px", opacity:"0"}, ease:Power1.easeInOut}, 1.8);
 
+// View Call To Action
+    var view = new TimelineMax({paused:true});
+view.to('.view-work', .85, {css:{width: "40px"}, ease:Power4.easeInOut}, 0)
+
+$(".view").on("mouseenter", function() {     
+  view.play();
+}).on("mouseleave", function() {
+  view.reverse();
+});
+
+
 // Menu
 
 var header = $(".header");

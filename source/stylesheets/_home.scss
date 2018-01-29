@@ -19,6 +19,8 @@ body {
 		position:relative;
 		float:right;
 		margin-bottom:0px;
+		display:block;
+		cursor: pointer;
 	}
 }
 
@@ -85,6 +87,11 @@ body {
 	display:flex;
 	align-self: center;
 }
+
+.view-work {
+	width:0px;
+}
+
 .view-reverse {
 	display:flex;
 	align-self: center;
