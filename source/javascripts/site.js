@@ -195,8 +195,8 @@ cp.from(".cp-one-bd", 1, {xPercent:-100, ease:Power3.easeOut}, .2)
         .from(".cp-title-one", 1, {yPercent:100, opacity:0, ease:Power1.easeOut}, .3)
         .from(".cp-title-two", 1, {yPercent:100, opacity:0, ease:Power1.easeOut}, .4)
         .from(".cp-title-three", 1, {yPercent:100, opacity:0, ease:Power1.easeOut}, .4)
-        .staggerFrom(".service-list li", 1, {yPercent:20, opacity:0, ease:Power1.easeOut}, .10)
-        .staggerFrom(".core li", 1, {yPercent:20, opacity:0, ease:Power1.easeOut}, .10);
+        .staggerFrom(".core li", 1, {yPercent:20, opacity:0, ease:Power1.easeOut}, .10)
+        .staggerFrom(".service-list li", 1, {yPercent:20, opacity:0, ease:Power1.easeOut}, .10);
 
 new ScrollMagic.Scene({
     offset:-50,
