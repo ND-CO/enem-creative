@@ -19,6 +19,8 @@ body {
 		position:relative;
 		float:right;
 		margin-bottom:0px;
+		display:block;
+		cursor: pointer;
 	}
 }
 
@@ -53,7 +55,14 @@ body {
 			margin-left:-1px;
 			width:42px;
 			padding-bottom:10px;
-			border-top:2px solid $enem-beige;
+			border-top:2px solid $enem-beige 
+		}
+
+			.bottom-border {
+				margin-left:-1px;
+				width:0px;
+				margin-top:10px;
+				border-top:2px solid $enem-beige;
 		}
 	}
 
@@ -85,6 +94,11 @@ body {
 	display:flex;
 	align-self: center;
 }
+
+.view-work {
+	width:0px;
+}
+
 .view-reverse {
 	display:flex;
 	align-self: center;

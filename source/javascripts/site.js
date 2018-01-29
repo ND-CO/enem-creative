@@ -18,6 +18,28 @@ hero.from(loading, 1.5, {css:{height:"100%"}, ease:Power3.easeInOut}, 0)
     .from(".perc-hero", 1.5, { yPercent:-100, ease:Power3.easeInOut}, .8)
     .from(".proj-desc-fade", 2, {css:{marginTop: "20px", opacity:"0"}, ease:Power1.easeInOut}, 1.8);
 
+// View Call To Action
+    var view = new TimelineMax({paused:true});
+view.to('.view-work', .85, {css:{width: "40px"}, ease:Power4.easeInOut}, 0);
+
+$(".view").on("mouseenter", function() {     
+  view.play();
+}).on("mouseleave", function() {
+  view.reverse();
+});
+
+// Portfolio View Hover
+var viewproject = new TimelineMax({paused:true});
+viewproject.to('.bottom-border', .5, {css:{width: "42px"}, ease:Power4.easeInOut}, 0);
+
+$(".project-view").on("mouseenter", function() {     
+  viewproject.play();
+}).on("mouseleave", function() {
+  viewproject.reverse();
+});
+
+
+
 // Menu
 
 var header = $(".header");
@@ -195,8 +217,8 @@ cp.from(".cp-one-bd", 1, {xPercent:-100, ease:Power3.easeOut}, .2)
         .from(".cp-title-one", 1, {yPercent:100, opacity:0, ease:Power1.easeOut}, .3)
         .from(".cp-title-two", 1, {yPercent:100, opacity:0, ease:Power1.easeOut}, .4)
         .from(".cp-title-three", 1, {yPercent:100, opacity:0, ease:Power1.easeOut}, .4)
-        .staggerFrom(".service-list li", 1, {yPercent:20, opacity:0, ease:Power1.easeOut}, .10)
-        .staggerFrom(".core li", 1, {yPercent:20, opacity:0, ease:Power1.easeOut}, .10);
+        .staggerFrom(".core li", 1, {yPercent:20, opacity:0, ease:Power1.easeOut}, .10)
+        .staggerFrom(".service-list li", 1, {yPercent:20, opacity:0, ease:Power1.easeOut}, .10);
 
 new ScrollMagic.Scene({
     offset:-50,
