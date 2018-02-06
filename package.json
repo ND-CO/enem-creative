@@ -27,6 +27,7 @@
     "css-loader": "^0.27.3",
     "extract-text-webpack-plugin": "^2.1.0",
     "gsap": "^1.19.1",
+    "imagemin-mozjpeg": "^7.0.0",
     "imagemin-webpack-plugin": "^2.0.0",
     "jquery": "^3.2.1",
     "node-sass": "^4.5.2",

@@ -4,11 +4,14 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 var CompressionPlugin = require("compression-webpack-plugin");
-var ImageminPlugin = require('imagemin-webpack-plugin').default
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+var ImageminPlugin = require('imagemin-webpack-plugin').default
+const imageminMozjpeg = require('imagemin-mozjpeg');
 const path = require('path');
 
 module.exports = {
+
+
     entry: {
         site: "./source/javascripts/site.js",
         vendor: [
@@ -25,6 +28,8 @@ module.exports = {
         filename: "javascripts/[name].js", //Would like to use [name].[chunkhash]
         path: __dirname + '/.tmp/dist',
     },
+
+    
     resolve: {
         alias: {
             "jquery": __dirname + '/node_modules/jquery/dist/jquery.js',
@@ -66,17 +71,22 @@ module.exports = {
         new UglifyJSPlugin({
             compress: { warnings: false }
         }),
+            // Copy the images folder and optimize all the images
+            new CopyWebpackPlugin([{
+              from: 'source/images/'
+            }]),
 
-        new ImageminPlugin({
-            // disable: process.env.NODE_ENV !== 'production', // Disable during development
-            pngquant: {
-              quality: '60-70'
-            }
-          }),
-
-        new CopyWebpackPlugin([{
-            from: './source/images'
-          }]),
-          new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })
-    ]
-}
+            new ImageminPlugin({ 
+                disable: process.env.NODE_ENV !== 'production', // Disable during development
+                optipng: {
+                    optimizationLevel: 9
+                  },
+                plugins: [
+                    imageminMozjpeg({
+                      quality: 70,
+                      progressive: true
+                    })
+                  ]
+             })
+          ]
+        }
