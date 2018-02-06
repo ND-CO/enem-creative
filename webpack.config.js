@@ -4,6 +4,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 var CompressionPlugin = require("compression-webpack-plugin");
+var ImageminPlugin = require('imagemin-webpack-plugin').default
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -64,5 +66,17 @@ module.exports = {
         new UglifyJSPlugin({
             compress: { warnings: false }
         }),
+
+        new ImageminPlugin({
+            // disable: process.env.NODE_ENV !== 'production', // Disable during development
+            pngquant: {
+              quality: '60-70'
+            }
+          }),
+
+        new CopyWebpackPlugin([{
+            from: './source/images'
+          }]),
+          new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })
     ]
 }
