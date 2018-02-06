@@ -27,16 +27,16 @@
 
 @font-face {
   font-family: 'Novecentosanswide-Medium';
-  src: url('Novecentosanswide-Medium.eot?#iefix') format('embedded-opentype'),  url('Novecentosanswide-Medium.otf')  format('opentype'),
-	   url('Novecentosanswide-Medium.woff') format('woff'), url('Novecentosanswide-Medium.ttf')  format('truetype'), url('Novecentosanswide-Medium.svg#Novecentosanswide-Medium') format('svg');
+  src: url('/fonts/Novecentosanswide-Medium.eot?#iefix') format('embedded-opentype'),  url('/fontsNovecentosanswide-Medium.otf')  format('opentype'),
+	   url('/fonts/Novecentosanswide-Medium.woff') format('woff'), url('/fonts/Novecentosanswide-Medium.ttf')  format('truetype'), url('/fonts/Novecentosanswide-Medium.svg#Novecentosanswide-Medium') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
     font-family: 'novecento_sans_widenormal';
-    src: url('../fonts/novecentosanswide-normal-webfont.woff2') format('woff2'),
-         url('../fonts/novecentosanswide-normal-webfont.woff') format('woff');
+    src: url('/fonts/novecentosanswide-normal-webfont.woff2') format('woff2'),
+         url('/fonts/novecentosanswide-normal-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 

@@ -1,4 +1,15 @@
-jQuery( document ).ready(function($) {
+// This is where it all goes :)
+import styles from '../stylesheets/main.css.scss';
+
+//Javascript
+import $ from 'jquery';
+import TweenMax from 'TweenMax';
+import TimelineMax from 'TimelineMax';
+import ScrollMagic from 'ScrollMagic';
+import ScrollToPlugin from 'ScrollToPlugin';
+import scrollmagicgsap from 'scrollmagicgsap';
+import addIndicators from 'addIndicators';
+
 
 // Borders
 var  bFour = $(".borderFour"),
@@ -258,6 +269,5 @@ new ScrollMagic.Scene({
 .addTo(ctrl);
 
 
-});
 
 

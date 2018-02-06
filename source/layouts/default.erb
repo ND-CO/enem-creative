@@ -10,7 +10,7 @@
     <meta name="keywords" content="graphic design, brand identity, website design, marketing, logos, web development"/>
     <title><%= current_page.data.title || "ENEM Creative" %></title>
 
-    <%= stylesheet_link_tag "main" %>
+    <%= stylesheet_link_tag "site" %>
     
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69973319-1"></script>
@@ -28,15 +28,9 @@
     <%= yield %>
     <%= partial "letswork" %>
     <%= partial "footer" %>
-
-<!-- Load some Magic -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/EaselPlugin.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
-<script src="/scrollmagic/plugins/animation.gsap.min.js"></script>
-<script src="../gsap/plugins/ScrollToPlugin.min.js"></script>
-<%= javascript_include_tag "site" %>
+    <!--The Magic-->
+    <%= javascript_include_tag "vendor" %>
+    <%= javascript_include_tag "site" %>
 
   </body>
 </html>

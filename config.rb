@@ -13,68 +13,31 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-# With alternative layout
-# page '/path/to/file.html', layout: 'other_layout'
-
-# Proxy pages
-# https://middlemanapp.com/advanced/dynamic-pages/
-
-# proxy(
-#   '/this-page-has-no-template.html',
-#   '/template-file.html',
-#   locals: {
-#     which_fake_page: 'Rendering a fake page with a local variable'
-#   },
-# )
-
-# Helpers
-# Methods defined in the helpers block are available in templates
-# https://middlemanapp.com/basics/helper-methods/
-
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
-
-# Build-specific configuration
-# https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
 #Directory Index
 activate :directory_indexes
 
+# Webpack
+activate :external_pipeline,
+  name: :webpack,
+  command: build? ? './node_modules/webpack/bin/webpack.js --bail' :
+                    './node_modules/webpack/bin/webpack.js --watch -d --color',
+  source: ".tmp/dist",
+  latency: 1
 
-#CircleCI Staging
-configure :staging do
-activate :s3_sync do |s3_sync|
-  s3_sync.bucket                = 'staging.enemcreative.com'
-  s3_sync.region                = 'us-east-1'
+
+configure :build do
+    # Minify & GZIP
+    activate :minify_css
+    activate :gzip
+    activate :minify_html
+  
   end
-end
-
-
-configure :production do
-    activate :s3_sync do |s3_sync|
-      s3_sync.bucket                = 'enemcreative.com'
-      s3_sync.region                = 'us-east-1'
-      default_caching_policy max_age: (60 * 60 * 24 * 365)
-      caching_policy 'text/html', public: true, max_age: 0, must_revalidate: true
-   end
-end
 
 
 # Live Reload
 configure :development do
  activate :livereload
-end
-
-  activate :minify_html do |html|
-    html.remove_quotes = false
-    html.remove_intertag_spaces = true
-  end
-
-configure :build do
-  activate :gzip
 end
 
 # Portfolio
