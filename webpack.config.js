@@ -17,11 +17,11 @@ module.exports = {
         vendor: [
                 "jquery",
                 "ScrollMagic",
-                "addIndicators",
+                // "addIndicators",
                 "scrollmagicgsap",
                 "TweenMax",
                 "TimelineMax",
-                // "ScrollToPlugin",
+                "ScrollToPlugin",
             ]
     },
     output: {
@@ -34,11 +34,11 @@ module.exports = {
         alias: {
             "jquery": __dirname + '/node_modules/jquery/dist/jquery.js',
             "ScrollMagic": __dirname + '/node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic',
-            "addIndicators": __dirname + '/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators',
+            // "addIndicators": __dirname + '/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators',
             "scrollmagicgsap": __dirname + '/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap',
             "TweenMax": __dirname + '/node_modules/gsap/src/uncompressed/TweenMax',
             "TimelineMax": __dirname + '/node_modules/gsap/src/uncompressed/TimelineMax',
-            // "ScrollToPlugin": __dirname + '/node_modules/gsap/src/uncompressed/plugins/ScrollToPlugin',
+            "ScrollToPlugin": __dirname + '/node_modules/gsap/src/uncompressed/plugins/ScrollToPlugin',
         }
     },
     module: {
