@@ -8,7 +8,7 @@ import TimelineMax from 'TimelineMax';
 import ScrollMagic from 'ScrollMagic';
 import ScrollToPlugin from 'ScrollToPlugin';
 import scrollmagicgsap from 'scrollmagicgsap';
-import addIndicators from 'addIndicators';
+// import addIndicators from 'addIndicators';
 
 
 // Borders
