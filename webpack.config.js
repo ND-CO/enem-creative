@@ -21,7 +21,7 @@ module.exports = {
                 "scrollmagicgsap",
                 "TweenMax",
                 "TimelineMax",
-                "ScrollToPlugin",
+                // "ScrollToPlugin",
             ]
     },
     output: {
@@ -38,7 +38,7 @@ module.exports = {
             "scrollmagicgsap": __dirname + '/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap',
             "TweenMax": __dirname + '/node_modules/gsap/src/uncompressed/TweenMax',
             "TimelineMax": __dirname + '/node_modules/gsap/src/uncompressed/TimelineMax',
-            "ScrollToPlugin": __dirname + '/node_modules/gsap/src/uncompressed/plugins/ScrollToPlugin',
+            // "ScrollToPlugin": __dirname + '/node_modules/gsap/src/uncompressed/plugins/ScrollToPlugin',
         }
     },
     module: {
