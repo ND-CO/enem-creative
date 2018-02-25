@@ -17,7 +17,7 @@ module.exports = {
         vendor: [
                 "jquery",
                 "ScrollMagic",
-                "addIndicators",
+                // "addIndicators",
                 "scrollmagicgsap",
                 "TweenMax",
                 "TimelineMax",
@@ -34,7 +34,7 @@ module.exports = {
         alias: {
             "jquery": __dirname + '/node_modules/jquery/dist/jquery.js',
             "ScrollMagic": __dirname + '/node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic',
-            "addIndicators": __dirname + '/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators',
+            // "addIndicators": __dirname + '/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators',
             "scrollmagicgsap": __dirname + '/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap',
             "TweenMax": __dirname + '/node_modules/gsap/src/uncompressed/TweenMax',
             "TimelineMax": __dirname + '/node_modules/gsap/src/uncompressed/TimelineMax',
@@ -71,22 +71,22 @@ module.exports = {
         new UglifyJSPlugin({
             compress: { warnings: false }
         }),
-            // Copy the images folder and optimize all the images
-            new CopyWebpackPlugin([{
-              from: 'source/images/'
-            }]),
+            // // Copy the images folder and optimize all the images
+            // new CopyWebpackPlugin([{
+            //   from: 'source/images/'
+            // }]),
 
-            new ImageminPlugin({ 
-                disable: process.env.NODE_ENV !== 'production', // Disable during development
-                optipng: {
-                    optimizationLevel: 9
-                  },
-                plugins: [
-                    imageminMozjpeg({
-                      quality: 70,
-                      progressive: true
-                    })
-                  ]
-             })
+            // new ImageminPlugin({ 
+            //     optipng: {
+            //         optimizationLevel: 9
+            //       },
+            //     plugins: [
+            //         imageminMozjpeg({
+            //           quality: 80,
+            //           progressive: true,
+            //           destination: '.tmp/dist/images/',
+            //         })
+            //       ]
+            //  })
           ]
         }
