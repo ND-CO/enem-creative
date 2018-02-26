@@ -71,22 +71,22 @@ module.exports = {
         new UglifyJSPlugin({
             compress: { warnings: false }
         }),
-            // // Copy the images folder and optimize all the images
-            // new CopyWebpackPlugin([{
-            //   from: 'source/images/',
-            //   to: 'images/'
-            // }]),
+            // Copy the images folder and optimize all the images
+            new CopyWebpackPlugin([{
+              from: 'source/images/',
+              to: 'images/',
+            }]),
 
-            // new ImageminPlugin({ 
-            //     optipng: {
-            //         optimizationLevel: 9
-            //       },
-            //     plugins: [
-            //         imageminMozjpeg({
-            //           quality: 80,
-            //           progressive: true,
-            //         })
-            //       ]
-            //  })
+            new ImageminPlugin({ 
+                optipng: {
+                    optimizationLevel: 9
+                  },
+                plugins: [
+                    imageminMozjpeg({
+                      quality: 80,
+                      progressive: true,
+                    })
+                  ]
+             })
           ]
 }
