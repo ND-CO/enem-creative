@@ -2,7 +2,7 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+// const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 var CompressionPlugin = require("compression-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 var ImageminPlugin = require('imagemin-webpack-plugin').default
@@ -68,9 +68,9 @@ module.exports = {
             name: "vendor"
         }),
 
-        new UglifyJSPlugin({
-            compress: { warnings: false }
-        }),
+        // new UglifyJSPlugin({
+        //     compress: { warnings: false }
+        // }),
             // Copy the images folder and optimize all the images
             new CopyWebpackPlugin([{
               from: 'source/images/',
