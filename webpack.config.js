@@ -3,9 +3,6 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 var CompressionPlugin = require("compression-webpack-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-import ImageminPlugin from 'imagemin-webpack-plugin'
-const imageminMozjpeg = require('imagemin-mozjpeg');
 const path = require('path');
 
 module.exports = {
@@ -66,22 +63,5 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             name: "vendor"
         }),
-            // Copy the images folder and optimize all the images
-            new CopyWebpackPlugin([{
-              from: 'source/images/',
-              to: 'images/',
-            }]),
-
-            new ImageminPlugin({ 
-                optipng: {
-                    optimizationLevel: 9
-                  },
-                plugins: [
-                    imageminMozjpeg({
-                      quality: 80,
-                      progressive: true,
-                    })
-                  ]
-             })
           ]
 }
