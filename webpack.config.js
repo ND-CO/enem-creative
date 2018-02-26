@@ -74,7 +74,7 @@ module.exports = {
             // Copy the images folder and optimize all the images
             new CopyWebpackPlugin([{
               from: 'source/images/',
-              to: 'images/',
+            //   to: 'images/',
             }]),
 
             new ImageminPlugin({ 
