@@ -27,7 +27,7 @@ jobs:
        - restore_cache:
             keys: 
               - npm-cache-{{ checksum "package.json" }}
-              - npm-cache-v2
+              - npm-cache-
 
        # Install NPM
        - run: 
@@ -91,7 +91,7 @@ jobs:
        - restore_cache:
             keys: 
               - npm-cache-{{ checksum "package.json" }}
-              - npm-cache-v2
+              - npm-cache-
 
        # Install NPM
        - run: 
