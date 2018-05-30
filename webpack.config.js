@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
 
 module.exports = {
