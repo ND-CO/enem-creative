@@ -35,7 +35,7 @@
     "style-loader": "^0.20.2",
     "uglify-js": "git://github.com/mishoo/UglifyJS2#harmony-v2.8.22",
     "uglifyjs-webpack-plugin": "^1.2.2",
-    "webpack": "^3.10.0",
+    "webpack": "^2.5.1",
     "webpack-bundle-analyzer": "^2.8.2"
   },
   "dependencies": {
