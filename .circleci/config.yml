@@ -1,7 +1,6 @@
 version: 2.0
-
 jobs:
-   development:
+   "development":
      docker:
        - image: circleci/ruby:2.4.1-node
      steps:
@@ -65,7 +64,7 @@ jobs:
 
 
 
-   master:
+   "master":
      docker:
        - image: circleci/ruby:2.4.1-node
      steps:
@@ -127,15 +126,15 @@ jobs:
 
 
 
-workflows:
+workflows: 
   version: 2
-  build-and-deploy:
+  build:
     jobs:
-      - development:
+      - "development":
           filters:
             branches:
               only: development
-      - master:
+      - "master":
           filters:
             branches:
               only: master
