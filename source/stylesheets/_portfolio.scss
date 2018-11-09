@@ -46,8 +46,16 @@ margin-right:0;
 	margin-top:100px;
 }
 
-// Alignment of Non Full Width
+// Padding with No Background Images
+.image-pad {
+	padding:224px 0px;
+}
 
+.image-pad-desc {
+	padding:224px 0px 64px 0px;
+}
+
+// Alignment of Non Full Width
 .two-up {
 	border-right:1px solid #FFFFFF;
 }
@@ -60,7 +68,6 @@ margin-right:0;
  }
 
  // Logo Page
-
 .logos {
 	display:flex;
 	justify-content: center;
@@ -77,8 +84,6 @@ margin-right:0;
 
 
 // Project Background Colors
-
-
 .background {
 	width:100%;
 }
