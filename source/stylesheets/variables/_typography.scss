@@ -1,6 +1,5 @@
-$primary-font: 	  'PT Serif', serif;
-$secondary-font:  'novecento_sans_widenormal';
-
+$primary-font: 	  "ibm-plex-sans";
+$secondary-font:  "ibm-plex-sans";
 
 // Main Typography Set
 
@@ -28,18 +27,16 @@ b {
 }
 
 h1, h2 {
-	font-weight:800;
+	font-weight:400;
 	font-family:$primary-font;
 	color: $enem-black;
 }
 
 h3, h4, h5, h6 {
-	font-weight:800;
+	font-weight:400;
 	font-family: $secondary-font;
 	line-height:.5em;
-	letter-spacing:.3em;
 	color: $enem-black;
-	text-transform:lowercase;
 }
 
 // Type Sizing
